@@ -13,7 +13,7 @@
 1. Клонируйте репозиторий:
 
     ```bash
-    git clone https://github.com/yourusername/dog-breed-classifier-bot.git
+    git clone https://github.com/GurenkoNick/DogBreedClassification
     ```
 
 2. Установите необходимые библиотеки Python из файла `requirements.txt`:
