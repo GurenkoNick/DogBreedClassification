@@ -14,8 +14,6 @@ class MyModel():
     def __init__(self):
         self.predg_label = None
         self.predg_perc = None
-        # labels = pd.read_csv('labels.csv')
-        # self.__classes = sorted(list(set(labels['breed'])))
         self.__classes = \
             ['affenpinscher', 'afghan_hound', 'african_hunting_dog', 'airedale', 'american_staffordshire_terrier',
              'appenzeller', 'australian_terrier', 'basenji', 'basset', 'beagle', 'bedlington_terrier',
@@ -68,5 +66,3 @@ class MyModel():
 
         print(f"Predicted label: {self.predg_label}")
         print(f"Probability of prediction): {self.predg_perc} %")
-
-# MyModel().get_predict()

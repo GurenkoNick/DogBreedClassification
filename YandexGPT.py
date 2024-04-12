@@ -13,11 +13,12 @@ def get_response(auth_headers, folder_id, breed: str):
             {
                 "role": "system",
                 "text": "Ты консультант, который предоставляет хозяину характеристику собаки в зависимости от её породы."
+                        "Твой ответ полность на русском языке."
                         "Отвечай без разметки Markdown."
             },
             {
                 "role": "user",
-                "text": f"Привет! Расскажи мне о собаке породы {breed}"
+                "text": f"Расскажи мне о собаке породы {breed}"
             }
         ]
     }
@@ -27,5 +28,4 @@ def get_response(auth_headers, folder_id, breed: str):
     response = requests.post(url, headers=auth_headers, json=prompt)
     result = response.json()
 
-    print(result)
     return result["result"]["alternatives"][0]["message"]["text"]
